@@ -1,13 +1,12 @@
 <script setup>
 import Header from './components/partials/Header.vue'
 import Footer from './components/partials/Footer.vue'
+import Body from './components/Body.vue'
 </script>
 
 <template>
   <Header />
-
-  <main>
-  </main>
+  <Body />
   <Footer />
 </template>
 
