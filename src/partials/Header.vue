@@ -5,7 +5,7 @@
 <template>
 	<header>
 		<Logo id="logo" fill="currentcolor" />
-		<a href="https://github.com/giantpaper/wantlist" target="_blank" rel="noopener">
+		<a href="https://github.com/giantpaper/wantlist" class="mt-3" target="_blank" rel="noopener">
 			<Github class="fa" /> View on Github
 		</a>
 	</header>
