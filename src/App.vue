@@ -6,8 +6,16 @@
 
 <template>
   <Header />
-  <Home />
-  <Footer />
+  <Suspense>
+    <template #default>
+      <Home />
+    </template>
+    
+    <template #fallback>
+      <div class="loading">Loading...</div>
+    </template>
+  </Suspense>
+  <Footer year="2022" />
 </template>
 
 <style scoped>
