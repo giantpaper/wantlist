@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { StoryblokVue, apiPlugin } from '@storyblok/vue'
 import App from './App.vue'
 // Components
+import CallToAction from './components/CallToAction.vue'
 import Item from './components/Item.vue'
 import Heading from './components/Heading.vue'
 import Grid from './components/Grid.vue';
@@ -17,6 +18,7 @@ app.use(StoryblokVue, {
 	accessToken: import.meta.env.VITE_PREVIEW_TOKEN,
 	use: [apiPlugin],
 })
+app.component('CallToAction', CallToAction)
 app.component('Item', Item)
 app.component('Heading', Heading)
 app.component('Grid', Grid);
