@@ -28,6 +28,11 @@ header {
   margin: 0 auto 2rem;
 }
 
+.loading {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 @media (min-width: 1024px) {
   header {
     display: flex;
