@@ -6,6 +6,7 @@
 </template>
 <style lang="scss" scoped>
 	h1 {
+		font-family: aria-text-g2, sans-serif;
 		text-align: center;
 		font-size: 2rem;
 	}
@@ -22,6 +23,4 @@
 	import { renderRichText } from "@storyblok/vue";
 	
 	const text = computed(() => renderRichText(props.blok.text));
-	
-	console.log(props.blok.text)
 </script>

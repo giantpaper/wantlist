@@ -13,10 +13,36 @@
   }
 
 }
-
-header {
-  padding: 3rem 0;
+.fa {
+  width: 1.25em;
+  display: inline-block;
+  fill: currentcolor;
 }
+
+p {
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.prose {
+  color: currentcolor;
+}
+
+.no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.blok {
+  padding: 1rem;
+}
+
 footer {
   &:before {
     background: var(--color-text);
@@ -36,11 +62,14 @@ a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
-a:hover {
-  @media (hover: hover) {
-    background-color: hsla(160, 100%, 37%, 0.2);
+a {
+  padding: 0.125rem;
+  &:hover {
+    @media (hover: hover) {
+      background-color: hsla(160, 100%, 37%, 0.2);
+    }
   }
 }
