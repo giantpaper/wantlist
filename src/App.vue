@@ -32,6 +32,8 @@ header {
   text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
+  padding: 2rem 0 3rem;
+  letter-spacing: 0.2rem;
 }
 @media (min-width: 1024px) {
   header {
