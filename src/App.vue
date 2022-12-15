@@ -1,6 +1,6 @@
 <script setup>
-import Header from './components/partials/Header.vue'
-import Footer from './components/partials/Footer.vue'
+  import Header from './partials/Header.vue'
+  import Footer from './partials/Footer.vue'
   import Home from './pages/Home.vue'
 </script>
 
