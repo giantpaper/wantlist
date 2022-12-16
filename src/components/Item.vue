@@ -15,14 +15,10 @@
 		gap: 1rem;
 		align-items: center;
 		position: relative;
-		margin-bottom: 0.5rem;
-		&:last-child {
-			margin-bottom: 1rem;
-		}
-		@media (max-width: 600px) {
+		@media (max-width: 1024px) {
 			text-align: center;
 		}
-		@media (min-width: 601px) {
+		@media (min-width: 1025px) {
 			grid-template-columns: 200px auto;
 		}
 		h3 {

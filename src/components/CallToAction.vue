@@ -1,5 +1,5 @@
 <template>
-	<section class="blok !pb-16">
+	<section class="blok !pb-16 col-span-2">
 		<h1>{{ blok.headline }}</h1>
 		<div class="text prose mx-auto" v-html="text"></div>
 	</section>

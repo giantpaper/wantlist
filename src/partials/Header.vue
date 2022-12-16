@@ -3,7 +3,7 @@
 	import Logo from '../assets/icons/Logo.vue'
 </script>
 <template>
-	<header>
+	<header class="md:pt-12">
 		<Logo id="logo" fill="currentcolor" />
 		<a href="https://github.com/giantpaper/wantlist" class="mt-3" target="_blank" rel="noopener">
 			<Github class="fa" /> View on Github
@@ -16,7 +16,6 @@
 		padding-right: 0;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		padding-top: 3rem;
 		&:after {
 			background: var(--color-text);
 			width: 100%;
@@ -24,7 +23,6 @@
 			content: '';
 			display: block;
 			margin-top: 1rem;
-			margin-bottom: 1rem;
 		}
 	}
 	a {

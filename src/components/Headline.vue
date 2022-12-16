@@ -1,10 +1,12 @@
 <template>
-	<h1 v-if="blok.type==='h1'">{{ blok.text }}</h1>
-	<h2 v-if="blok.type==='h2'">{{ blok.text }}</h2>
-	<h3 v-if="blok.type==='h3'">{{ blok.text }}</h3>
-	<h4 v-if="blok.type==='h4'">{{ blok.text }}</h4>
-	<h5 v-if="blok.type==='h5'">{{ blok.text }}</h5>
-	<h6 v-if="blok.type==='h6'">{{ blok.text }}</h6>
+	<header class="col-span-2">
+		<h1 v-if="blok.type==='h1'">{{ blok.text }}</h1>
+		<h2 v-if="blok.type==='h2'">{{ blok.text }}</h2>
+		<h3 v-if="blok.type==='h3'">{{ blok.text }}</h3>
+		<h4 v-if="blok.type==='h4'">{{ blok.text }}</h4>
+		<h5 v-if="blok.type==='h5'">{{ blok.text }}</h5>
+		<h6 v-if="blok.type==='h6'">{{ blok.text }}</h6>
+	</header>
 </template>
 
 <style lang="scss" scoped>
