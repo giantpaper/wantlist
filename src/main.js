@@ -5,10 +5,7 @@ import App from './App.vue'
 import CallToAction from './components/CallToAction.vue'
 import Item from './components/Item.vue'
 import Heading from './components/Heading.vue'
-import Grid from './components/Grid.vue';
 import Page from './components/Page.vue';
-import Teaser from './components/Teaser.vue';
-import Feature from './components/Feature.vue';
 
 import './favicon.svg'
 import './favicon.ico'
@@ -23,9 +20,6 @@ app.use(StoryblokVue, {
 app.component('CallToAction', CallToAction)
 app.component('Item', Item)
 app.component('Heading', Heading)
-app.component('Grid', Grid);
 app.component('Page', Page);
-app.component('Teaser', Teaser);
-app.component('Feature', Feature);
 
 app.mount('#app')
