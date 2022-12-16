@@ -15,7 +15,7 @@
       <div class="loading">Loading...</div>
     </template>
   </Suspense>
-  <Footer year="2022" />
+  <Footer />
 </template>
 
 <style lang="scss" scoped>
