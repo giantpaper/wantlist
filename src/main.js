@@ -10,6 +10,8 @@ import Page from './components/Page.vue';
 import Teaser from './components/Teaser.vue';
 import Feature from './components/Feature.vue';
 
+import './favicon.svg'
+import './favicon.ico'
 import './assets/main.scss'
 
 const app = createApp(App)
