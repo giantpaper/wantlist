@@ -6,7 +6,7 @@
 </template>
 <style lang="scss" scoped>
 	h1 {
-		font-family: aria-text-g2, sans-serif;
+		font-family: brevia, sans-serif;
 		text-align: center;
 		font-size: 2rem;
 	}
