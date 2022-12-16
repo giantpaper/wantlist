@@ -1,6 +1,8 @@
 <template>
 	<section v-editable="blok" class="blok item">
-		<img v-if="blok.Image" :src="blok.Image.filename" :alt="blok.Image.alt" class="mx-auto" />
+		<img v-if="blok.Image" :src="blok.Image.filename + '/m/230x0/'" :alt="blok.Image.alt" class="mx-auto"
+			:srcset="blok.Image.filename + '/m/460x0/ 2x'"
+		/>
 		<div v-for="p in blok.Description.content" class="flex flex-col justify-stretch">
 			<h3 class="text-lg">{{ blok.Name }}</h3>
 			<p v-for="q in p.content">{{ q.text }}</p>
