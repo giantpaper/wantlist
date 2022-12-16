@@ -1,10 +1,10 @@
 <template>
 	<section v-editable="blok" class="blok item">
 		<figure v-if="blok.Image.filename!==''">
-			<img :src="blok.Image.filename + '/m/230x0/'" :alt="blok.Image.alt" class="mx-auto"
-				:srcset="blok.Image.filename + '/m/460x0/ 2x'"
-				width="230"
-				height="130"
+			<img :src="blok.Image.filename + '/m/440x0/'" :alt="blok.Image.alt" :class="imgOrientation + ' mx-auto'"
+				:srcset="blok.Image.filename + '/m/880x0/ 2x'"
+				width="440"
+				height="440"
 			/>
 			<figcaption class="text-xs" v-if="blok.Image.copyright">{{ blok.Image.copyright }}</figcaption>
 		</figure>
@@ -40,8 +40,10 @@
 			max-width: 100%;
 			height: auto;
 			border-radius: 0.25rem;
-			@media (max-width: 600px) {
-				max-width: 230px;
+			&.portrait {
+				@media (max-width: 1024px) {
+					max-width: 230px;
+				}
 			}
 		}
 		.img_blank {
@@ -74,6 +76,9 @@
 	}
 	figure {
 		position: relative;
+		height: 100%;
+		display: flex;
+		align-items: center;
 		figcaption {
 			background: transparentize(white, 0.5);
 			position: absolute;
@@ -90,10 +95,28 @@
 </style>
 
 <script setup>
-defineProps({
+const props = defineProps({
 	blok: {
 		type: String,
 		required: true,
 	},
 })
+
+// https://a.storyblok.com/f/161701/655x369/7bfbfa63ea/screenshot-2022-12-14-at-23-26-25-grim-fandango-remastered-for-nintendo-switch-nintendo-official-site.png
+
+// Get image orientation
+let imgD = props.blok.Image.filename.match(/([0-9]+)x([0-9]+)/);
+let imgOrientation;
+let w = parseInt(imgD[1])
+let h = parseInt(imgD[2])
+
+if ( w === h ) {
+	imgOrientation = 'square'
+}
+else if (w > h) {
+	imgOrientation = 'landscape'
+}
+else if (w < h) {
+	imgOrientation = 'portrait'
+}
 </script>
