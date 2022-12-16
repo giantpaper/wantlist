@@ -13,13 +13,12 @@
 	.item {
 		display: grid;
 		gap: 1rem;
-		align-items: center;
 		position: relative;
-		@media (max-width: 1024px) {
-			text-align: center;
-		}
+		text-align: center;
 		@media (min-width: 1025px) {
 			grid-template-columns: 200px auto;
+			align-items: center;
+			text-align: left;
 		}
 		h3 {
 			font: 700 1.5rem brevia,sans-serif;
