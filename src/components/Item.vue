@@ -4,7 +4,9 @@
 		<div v-for="p in blok.Description.content" class="flex flex-col justify-stretch">
 			<h3 class="text-lg">{{ blok.Name }}</h3>
 			<p v-for="q in p.content">{{ q.text }}</p>
-			<p class=""><a v-if="blok.URL.url" :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View Item</a> <strong v-if="blok.PriceTag">${{ blok.PriceTag }}</strong> On <span v-if="blok.Store">{{ blok.Store }}</span></p>
+			<p class="text-sm flex items-center justify-center md:justify-start gap-2">
+				<a v-if="blok.URL.url" :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View Item</a> <span><strong v-if="blok.PriceTag">${{ blok.PriceTag }}</strong> On <span v-if="blok.Store">{{ blok.Store }}</span></span>
+			</p>
 		</div>
 	</section>
 </template>
@@ -42,7 +44,6 @@
 			text-transform: uppercase;
 			font-weight: bold;
 			font-size: 0.8em;
-			margin: 1rem 0 0.5rem;
 			border-radius: 0.25rem;
 		}
 		&:before {
@@ -57,9 +58,6 @@
 				right: 0;
 				bottom: 0;
 		}
-	}
-	.pricetag_store {
-		font-size: 0.8em;
 	}
 	i {
 		font-style: normal;
