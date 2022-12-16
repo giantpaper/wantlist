@@ -19,7 +19,7 @@ app.use(StoryblokVue, {
 })
 app.component('CallToAction', CallToAction)
 app.component('Item', Item)
-app.component('Page', Page);
 app.component('Headline', Headline)
+app.component('Page', Page)
 
 app.mount('#app')
