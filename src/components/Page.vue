@@ -1,11 +1,11 @@
 <template>
-  <div v-editable="blok" class="page blok !p-0">
+  <section v-editable="blok" class="page blok !p-0">
     <StoryblokComponent
       v-for="blok in blok.body"
       :blok="blok"
       :key="blok._uid"
     />
-  </div>
+  </section>
 </template>
 
 <script setup>
