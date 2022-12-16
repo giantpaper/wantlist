@@ -25,7 +25,7 @@
 		gap: 1rem;
 		position: relative;
 		text-align: center;
-		@media (min-width: 1025px) {
+		@media (min-width: 1024px) {
 			grid-template-columns: 200px auto;
 			align-items: center;
 			text-align: left;
