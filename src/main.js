@@ -4,7 +4,7 @@ import App from './App.vue'
 // Components
 import CallToAction from './components/CallToAction.vue'
 import Item from './components/Item.vue'
-import Heading from './components/Heading.vue'
+import Headline from './components/Headline.vue'
 import Page from './components/Page.vue';
 
 import './favicon.svg'
@@ -19,7 +19,7 @@ app.use(StoryblokVue, {
 })
 app.component('CallToAction', CallToAction)
 app.component('Item', Item)
-app.component('Heading', Heading)
 app.component('Page', Page);
+app.component('Headline', Headline)
 
 app.mount('#app')
