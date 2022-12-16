@@ -6,7 +6,7 @@
 	<header class="md:pt-12">
 		<Logo id="logo" fill="currentcolor" />
 		<a href="https://github.com/giantpaper/wantlist" class="mt-3" target="_blank" rel="noopener">
-			<Github class="fa" /> View on Github
+			<Github class="fa" /><span class="hidden md:block"> View on Github</span>
 		</a>
 	</header>
 </template>
