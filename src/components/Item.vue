@@ -1,10 +1,10 @@
 <template>
 	<section v-editable="blok" class="blok item">
 		<img v-if="blok.Image" :src="blok.Image.filename" :alt="blok.Image.alt" class="mx-auto" />
-		<div v-for="p in blok.Description.content">
-			<h3 class="text-lg">{{ blok.Name }} <i v-if="blok.PriceTag"> / ${{ blok.PriceTag }}</i></h3>
+		<div v-for="p in blok.Description.content" class="flex flex-col justify-stretch">
+			<h3 class="text-lg">{{ blok.Name }}</h3>
 			<p v-for="q in p.content">{{ q.text }}</p>
-			<p class="" v-if="blok.URL.url"><a :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View It on {{ blok.Store }}</a></p>
+			<p class=""><a v-if="blok.URL.url" :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View Item</a> <strong v-if="blok.PriceTag">${{ blok.PriceTag }}</strong> On <span v-if="blok.Store">{{ blok.Store }}</span></p>
 		</div>
 	</section>
 </template>
@@ -57,6 +57,9 @@
 				right: 0;
 				bottom: 0;
 		}
+	}
+	.pricetag_store {
+		font-size: 0.8em;
 	}
 	i {
 		font-style: normal;
