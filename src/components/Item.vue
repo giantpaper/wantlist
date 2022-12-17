@@ -15,12 +15,20 @@
 			<p v-if="!blok.Options" class="pricetag_store flex items-center justify-center gap-2">
 				<a v-if="blok.URL.url" :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View Item</a>
 				<span>
-					<strong v-if="blok.PriceTag">${{ blok.PriceTag }}</strong>
-					<span v-if="blok.Store" class="store pl-2">On {{ blok.Store }}</span>
+					<strong v-if="blok.PriceTag" class="priceTag default__priceTag mr-1">${{ blok.PriceTag }}</strong>
+					<span v-if="blok.Store" class="store">On {{ blok.Store }}</span>
 				</span>
 			</p>
+			<p v-if="blok.Options">
+				<span v-if="blok.PriceTag" class="options__priceTag priceTag">${{ blok.PriceTag }}</span>
+				<span v-if="blok.Store" class="options__store">on {{ blok.Store }}</span>
+			</p>
 			<ul v-if="blok.Options" class="options no-list flex flex-wrap gap-1 justify-center">
-				<li v-for="option in blok.Options"><a v-if="option.URL.url" :href="option.URL.url" class="button" target="_blank" rel="noopener noreferer">${{ option.PriceTag }} on {{ option.Store }}</a></li>
+				<li v-for="option in blok.Options"><a v-if="option.URL.url" :href="option.URL.url" class="button" target="_blank" rel="noopener noreferer">
+					<span v-if="option.PriceTag" class="options__priceTag">${{ option.PriceTag }}</span>
+					<span v-if="option.Store" class="options__store">on {{ option.Store }}</span>
+					<span v-if="option.Variant" class="options__variant">for {{ option.Variant }}</span>
+				</a></li>
 			</ul>
 		</div>
 	</section>
@@ -42,6 +50,9 @@
 		h3 {
 			font: 700 1.5rem brevia,sans-serif;
 			margin-bottom: 0.125rem;
+		}
+		.priceTag {
+			font: 700 1rem brevia,sans-serif;
 		}
 		.img_blank,
 		img {
@@ -82,16 +93,12 @@
 				right: 0;
 				bottom: 0;
 		}
-		ul.options {
-			li:not(:last-child) {
-				&:after {
-					content: ' / ';
-				}
-			}
-		}
 		&.portrait {
 			.pricetag_store {
 				@apply flex-col lg:items-start;
+			}
+			.options {
+				@apply lg:justify-start;
 			}
 		}
 	}
@@ -112,6 +119,9 @@
 	}
 	i {
 		font-style: normal;
+	}
+	h4 {
+		font-weight: bold;
 	}
 </style>
 
