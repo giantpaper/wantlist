@@ -41,6 +41,10 @@ p {
 
 .page .blok {
   padding: 1rem;
+  
+  &.wide {
+    @apply col-span-2 xl:col-span-3;
+  }
 }
 
 footer {

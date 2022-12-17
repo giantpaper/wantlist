@@ -1,5 +1,5 @@
 <template>
-	<header class="col-span-2">
+	<header class="blok wide">
 		<h1 v-if="blok.type==='h1'">{{ blok.text }}</h1>
 		<h2 v-if="blok.type==='h2'">{{ blok.text }}</h2>
 		<h3 v-if="blok.type==='h3'">{{ blok.text }}</h3>
