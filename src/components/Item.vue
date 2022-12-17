@@ -16,7 +16,7 @@
 				<a v-if="blok.URL.url" :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View Item</a>
 				<span>
 					<strong v-if="blok.PriceTag">${{ blok.PriceTag }}</strong>
-					<span v-if="blok.Store" class="store">On {{ blok.Store }}</span>
+					<span v-if="blok.Store" class="store pl-2">On {{ blok.Store }}</span>
 				</span>
 			</p>
 		</div>
