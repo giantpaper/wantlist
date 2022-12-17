@@ -81,7 +81,7 @@
 		}
 		&.portrait {
 			.pricetag_store {
-				@apply flex-col items-start;
+				@apply flex-col lg:items-start;
 			}
 		}
 	}
