@@ -12,13 +12,16 @@
 		<div v-for="p in blok.Description.content" class="flex flex-col justify-stretch">
 			<h3 class="text-lg">{{ blok.Name }}</h3>
 			<p v-for="q in p.content">{{ q.text }}</p>
-			<p class="pricetag_store flex items-center justify-center gap-2">
+			<p v-if="!blok.Options" class="pricetag_store flex items-center justify-center gap-2">
 				<a v-if="blok.URL.url" :href="blok.URL.url" class="button" target="_blank" rel="noopener noreferer">View Item</a>
 				<span>
 					<strong v-if="blok.PriceTag">${{ blok.PriceTag }}</strong>
 					<span v-if="blok.Store" class="store pl-2">On {{ blok.Store }}</span>
 				</span>
 			</p>
+			<ul v-if="blok.Options" class="options no-list flex flex-wrap gap-1 justify-center">
+				<li v-for="option in blok.Options"><a v-if="option.URL.url" :href="option.URL.url" class="button" target="_blank" rel="noopener noreferer">${{ option.PriceTag }} on {{ option.Store }}</a></li>
+			</ul>
 		</div>
 	</section>
 </template>
@@ -78,6 +81,13 @@
 				left: 0;
 				right: 0;
 				bottom: 0;
+		}
+		ul.options {
+			li:not(:last-child) {
+				&:after {
+					content: ' / ';
+				}
+			}
 		}
 		&.portrait {
 			.pricetag_store {
