@@ -26,8 +26,8 @@
 			<ul v-if="blok.Options" class="options no-list flex flex-wrap gap-1 justify-center">
 				<li v-for="option in blok.Options"><a v-if="option.URL.url" :href="option.URL.url" class="button" target="_blank" rel="noopener noreferer">
 					<span v-if="option.PriceTag" class="options__priceTag">${{ option.PriceTag }}</span>
-					<span v-if="option.Store" class="options__store">on {{ option.Store }}</span>
-					<span v-if="option.Variant" class="options__variant">for {{ option.Variant }}</span>
+					<span v-if="option.Store" class="options__store"> on {{ option.Store }}</span>
+					<span v-if="option.Variant" class="options__variant"> for {{ option.Variant }}</span>
 				</a></li>
 			</ul>
 		</div>
