@@ -21,7 +21,7 @@
 			</p>
 			<p v-if="blok.Options">
 				<span v-if="blok.PriceTag" class="options__priceTag priceTag">${{ blok.PriceTag }}</span>
-				<span v-if="blok.Store" class="options__store">on {{ blok.Store }}</span>
+				<span v-if="blok.Store" class="options__store">On {{ blok.Store }}</span>
 			</p>
 			<ul v-if="blok.Options" class="options no-list flex flex-wrap gap-1 justify-center">
 				<li v-for="option in blok.Options"><a v-if="option.URL.url" :href="option.URL.url" class="button" target="_blank" rel="noopener noreferer">
