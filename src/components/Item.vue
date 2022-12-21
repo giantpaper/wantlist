@@ -1,5 +1,5 @@
 <template>
-	<section v-editable="blok" :class="imgOrientation + ' blok item'">
+	<section v-if="!blok.Hide" v-editable="blok" :class="imgOrientation + ' blok item'">
 		<figure v-if="blok.Image.filename!==''">
 			<img :src="blok.Image.filename + '/m/440x0/'" :alt="blok.Image.alt" :class="imgOrientation + ' mx-auto'"
 				:srcset="blok.Image.filename + '/m/880x0/ 2x'"
@@ -132,8 +132,6 @@ const props = defineProps({
 		required: true,
 	},
 })
-
-// https://a.storyblok.com/f/161701/655x369/7bfbfa63ea/screenshot-2022-12-14-at-23-26-25-grim-fandango-remastered-for-nintendo-switch-nintendo-official-site.png
 
 // Get image orientation
 let imgD = props.blok.Image.filename.match(/([0-9]+)x([0-9]+)/);
